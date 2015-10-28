@@ -30,9 +30,9 @@ public class DetailActivity extends ActionBarActivity {
         double creditvalue = getIntent().getDoubleExtra(MainActivity.COURSE_CREDIT, 1.5);
         tvcreditvalue.setText(Double.toString(creditvalue));
 
-        TextView tvCourseNumber= (TextView) findViewById(R.id.coursenumber);
-        int value = getIntent().getIntExtra(MainActivity.COURSE_NUMBER, 0);
-        tvCourseNumber.setText(Integer.toString(value));
+//        TextView tvCourseNumber= (TextView) findViewById(R.id.coursenumber);
+//        int value = getIntent().getIntExtra(MainActivity.COURSE_NUMBER, 0);
+//        tvCourseNumber.setText(Integer.toString(value));
 
 
 //        ImageView iv = (ImageView) findViewById(R.id.imageCourse);

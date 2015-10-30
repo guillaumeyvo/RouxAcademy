@@ -2,6 +2,7 @@ package com.example.android.rouxacademy;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,21 +27,25 @@ public class DetailActivity extends ActionBarActivity {
         TextView tvDesc = (TextView) findViewById(R.id.tvDescription);
         tvDesc.setText(courseDesc);
 
-//        TextView tvcreditvalue = (TextView) findViewById(R.id.tvcreditvalue);
-//        double creditvalue = getIntent().getDoubleExtra(MainActivity.COURSE_CREDIT, 1.5);
-//        tvcreditvalue.setText(Double.toString(creditvalue));
+        // retrieve textview reference
+        // getting the value passed via the intent
+        // assigning the value to the textview
 
-//        TextView tvCourseNumber= (TextView) findViewById(R.id.coursenumber);
-//        int value = getIntent().getIntExtra(MainActivity.COURSE_NUMBER, 0);
-//        tvCourseNumber.setText(Integer.toString(value));
+        TextView tvcreditvalue = (TextView) findViewById(R.id.tvcreditvalue);
+        double creditvalue = getIntent().getDoubleExtra(MainActivity.COURSE_CREDIT, 1.5);
+        tvcreditvalue.setText(Double.toString(creditvalue)); // assigning the value to the textview
 
+        TextView tvCourseNumber= (TextView) findViewById(R.id.coursenumber);
+        int value = getIntent().getIntExtra(MainActivity.COURSE_NUMBER, 0);
+        tvCourseNumber.setText(Integer.toString(value));
 
-//        ImageView iv = (ImageView) findViewById(R.id.imageCourse);
-//        int res = getResources().getIdentifier(
-//                "image_" + course.getCourseNumber(), "drawable",
-//                context.getPackageName()
-//        );
-//        iv.setImageResource(res);
+        // retrieve imageview reference
+        // retrieve the corresponding drawable resource thanks to the course number set in the variable value
+        // assigning the drawable resource to the textview
+        ImageView iv = (ImageView) findViewById(R.id.imageCourse);
+        int res = getResources().getIdentifier("image_"+Integer.toString(value),"drawable",getPackageName());
+        iv.setImageResource(res);
+
     }
 
 

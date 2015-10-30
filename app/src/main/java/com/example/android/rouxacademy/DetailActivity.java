@@ -39,7 +39,7 @@ public class DetailActivity extends ActionBarActivity {
         int value = getIntent().getIntExtra(MainActivity.COURSE_NUMBER, 0);
         tvCourseNumber.setText(Integer.toString(value));
 
-        // retrieve imageview reference
+        // retrieve the imageview reference
         // retrieve the corresponding drawable resource thanks to the course number set in the variable value
         // assigning the drawable resource to the textview
         ImageView iv = (ImageView) findViewById(R.id.imageCourse);
